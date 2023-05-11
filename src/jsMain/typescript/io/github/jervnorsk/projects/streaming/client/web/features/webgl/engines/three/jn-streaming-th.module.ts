@@ -1,35 +1,37 @@
-import {NgModule} from '@angular/core';
-import {JnStreamingApp} from "./jn-streaming-app.component";
-import {JnCoreModule} from "../../../../../foundation/client/web/features/core/jn-core.module";
-import {JnStreamingAppRoutingModule} from "./jn-streaming-app-routing.module";
-import {JnStreamingSceneMain} from "./scenes/main/jn-streaming-scene-main.component";
-import {JnStreamingThModule} from "../features/webgl/engines/three/jn-streaming-th.module";
+import {NgModule} from "@angular/core";
+import {JnThModule} from "../../../../../../../../foundation/client/web/features/webgl/engines/three/jn-th.module";
+import {JnCoreModule} from "../../../../../../../../foundation/client/web/features/core/jn-core.module";
+import {JnStreamingThPrefabWavePoints} from "./prefab/wave/jn-streaming-th-prefab-wave-point.component";
 
 @NgModule({
     declarations: [
-        JnStreamingApp,
-        JnStreamingSceneMain
+        JnStreamingThPrefabWavePoints,
     ],
     imports: [
         // Module
         // -------------------------------------------------------------------------------------------------------------
-        JnStreamingAppRoutingModule,
 
         // Feature
         // -------------------------------------------------------------------------------------------------------------
-        JnStreamingThModule,
 
         // Foundation
         // -------------------------------------------------------------------------------------------------------------
         JnCoreModule,
-
-        // Lib
-        // -------------------------------------------------------------------------------------------------------------
+        JnThModule,
 
         // Framework
         // -------------------------------------------------------------------------------------------------------------
     ],
-    providers: [],
+    exports: [
+        // Module
+        // -------------------------------------------------------------------------------------------------------------
+        JnStreamingThPrefabWavePoints,
+
+        // Foundation
+        // -------------------------------------------------------------------------------------------------------------
+        JnThModule
+    ],
+    providers: []
 })
-export class JnStreamingAppModule {
+export class JnStreamingThModule {
 }

@@ -1,53 +1,38 @@
 import {NgModule} from "@angular/core";
-import {CommonModule} from "@angular/common";
-import {JnStack} from "./components/utils/stack/jn-stack.component";
-import {JnText} from "./components/utils/text/jn-text.component";
-import {JnEffectGlitch} from "./effects/glitch/jn-effect-glitch.directive";
-import {JnCoreRoutingModule} from "./jn-core-routing.module";
-import {JnErrorNotImplemented} from "./components/errors/jn-error-not-implemented.component";
-import {JnError} from "./components/errors/jn-error.component";
-import {JnErrorNotFound} from "./components/errors/jn-error-not-found.component";
-import {NgbAccordionBody} from "@ng-bootstrap/ng-bootstrap";
+import {NgxThreeModule} from "ngx-three";
+import {JnThGrid} from "./utils/grid/jn-th-grid.component";
+import {JnThPrefabWavePoint} from "./prefabs/wave/jn-th-prefab-wave-point.component";
 
 @NgModule({
     declarations: [
-        JnEffectGlitch,
-        JnError,
-        JnErrorNotFound,
-        JnErrorNotImplemented,
-        JnStack,
-        JnText,
+        JnThGrid,
+        JnThPrefabWavePoint
     ],
     imports: [
         // Module
         // -------------------------------------------------------------------------------------------------------------
-        JnCoreRoutingModule,
 
         // Lib
         // -------------------------------------------------------------------------------------------------------------
+        NgxThreeModule
 
         // Framework
         // -------------------------------------------------------------------------------------------------------------
-        CommonModule,
     ],
     exports: [
         // Module
         // -------------------------------------------------------------------------------------------------------------
-        JnEffectGlitch,
-        JnError,
-        JnErrorNotFound,
-        JnErrorNotImplemented,
-        JnStack,
-        JnText,
+        JnThGrid,
+        JnThPrefabWavePoint,
 
         // Lib
         // -------------------------------------------------------------------------------------------------------------
+        NgxThreeModule
 
         // Framework
         // -------------------------------------------------------------------------------------------------------------
-        CommonModule,
     ],
     providers: []
 })
-export class JnCoreModule {
+export class JnThModule {
 }
