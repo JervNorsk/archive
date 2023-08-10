@@ -1,0 +1,8 @@
+[submodule "2023/website"]
+	path = 2023/website
+	url = https://github.com/JervNorsk/archive.git
+	branch = 2023/website/main
+[submodule ".github/pages"]
+	path = .github/pages
+	url = https://github.com/JervNorsk/archive.git
+	branch = github/pages
